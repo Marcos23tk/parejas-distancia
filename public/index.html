@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adivinanzas para Parejas a Distancia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>Adivinanzas para parejas a distancia</h1>
+      <p>Creen una sala, jueguen desde cualquier lugar y descubran quien conoce mejor a quien.</p>
+    </header>
+
+    <section class="card" id="setupCard">
+      <div class="grid two">
+        <div>
+          <h2>Crear sala</h2>
+          <label>Tu nombre</label>
+          <input id="createName" type="text" placeholder="Ej. Jhon" />
+          <label>Tema</label>
+          <select id="theme">
+            <option value="romantico">Romantico</option>
+            <option value="divertido">Divertido</option>
+            <option value="profundo">Profundo</option>
+          </select>
+          <button id="createBtn">Crear sala</button>
+        </div>
+
+        <div>
+          <h2>Unirse a sala</h2>
+          <label>Tu nombre</label>
+          <input id="joinName" type="text" placeholder="Ej. Alex" />
+          <label>Codigo de sala</label>
+          <input id="joinCode" type="text" placeholder="Ej. SALA-ABC123" />
+          <button id="joinBtn">Unirme</button>
+        </div>
+      </div>
+      <p class="status" id="setupStatus"></p>
+    </section>
+
+    <section class="card hidden" id="gameCard">
+      <div class="topbar">
+        <div>
+          <h2 id="roomTitle">Sala</h2>
+          <p id="roomMeta"></p>
+        </div>
+        <div class="badge" id="storageMode">Conectando...</div>
+      </div>
+
+      <div class="grid two gap-lg">
+        <div>
+          <h3>Jugadores</h3>
+          <div id="playersBoard"></div>
+        </div>
+        <div>
+          <h3>Estado actual</h3>
+          <div id="currentState"></div>
+        </div>
+      </div>
+
+      <div class="card inner" id="turnCard"></div>
+      <div class="actions">
+        <button id="refreshBtn" class="secondary">Actualizar</button>
+        <button id="nextBtn" class="hidden">Siguiente ronda</button>
+      </div>
+
+      <div class="card inner">
+        <h3>Historial</h3>
+        <div id="historyList"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
