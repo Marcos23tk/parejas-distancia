@@ -1,0 +1,29 @@
+{
+  "roomCode": "SALA-RH91QI",
+  "createdAt": "2026-04-19T14:38:30.612Z",
+  "updatedAt": "2026-04-19T14:38:30.612Z",
+  "status": "waiting",
+  "theme": "romantico",
+  "round": 1,
+  "maxRounds": 5,
+  "activePlayerId": "7dae307c-71cf-4ea0-a833-67866d3d7b6a",
+  "phase": "waiting_player_2",
+  "players": [
+    {
+      "id": "7dae307c-71cf-4ea0-a833-67866d3d7b6a",
+      "name": "marcos",
+      "score": 0
+    }
+  ],
+  "currentTurn": {
+    "askerId": "7dae307c-71cf-4ea0-a833-67866d3d7b6a",
+    "guesserId": null,
+    "question": "",
+    "correctAnswer": "",
+    "guess": "",
+    "result": null,
+    "challengeFor": null,
+    "challengeText": ""
+  },
+  "history": []
+}
