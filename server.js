@@ -258,17 +258,7 @@ app.get('/api/health', (req, res) => {
     dataDir: DATA_DIR
   });
 });
-app.get('/api/debug-env', (req, res) => {
-  res.json({
-    vercel: !!process.env.VERCEL,
-    mode: LOCAL_FALLBACK ? 'local' : 'github',
-    owner: process.env.GITHUB_OWNER || null,
-    repo: process.env.GITHUB_REPO || null,
-    branch: BRANCH,
-    dataDir: DATA_DIR,
-    hasToken: !!process.env.GITHUB_TOKEN
-  });
-});
+
 app.post('/api/rooms', async (req, res) => {
   try {
     const { playerName, theme = 'romantico' } = req.body;
