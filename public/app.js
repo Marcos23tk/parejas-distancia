@@ -11,8 +11,14 @@ async function api(path, options = {}) {
     headers: { 'Content-Type': 'application/json' },
     ...options
   });
-  const data = await response.json();
-  if (!response.ok) throw new Error(data.error || 'Error inesperado');
+  const text = await response.text();
+  let data;
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch (error) {
+    throw new Error(`Error del servidor: ${response.status} ${text}`);
+  }
+  if (!response.ok) throw new Error(data.error || text || `HTTP ${response.status}`);
   return data;
 }
 
