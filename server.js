@@ -63,7 +63,6 @@ const RETOS = [
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
 
 async function ensureLocalDir() {
   await fs.mkdir(localStorageDir, { recursive: true });
@@ -140,6 +139,14 @@ async function githubRead(roomCode) {
 async function githubWrite(roomCode, roomData, sha = undefined) {
   const filePath = filePathForRoom(roomCode);
   const content = Buffer.from(JSON.stringify(roomData, null, 2)).toString('base64');
+
+  console.log('WRITING ROOM TO GITHUB:', {
+    owner: process.env.GITHUB_OWNER,
+    repo: process.env.GITHUB_REPO,
+    branch: BRANCH,
+    path: filePath
+  });
+
   await octokit.repos.createOrUpdateFileContents({
     owner: process.env.GITHUB_OWNER,
     repo: process.env.GITHUB_REPO,
@@ -244,7 +251,11 @@ function evaluateRound(room) {
 app.get('/api/health', (req, res) => {
   res.json({
     ok: true,
-    mode: LOCAL_FALLBACK ? 'local' : 'github'
+    mode: LOCAL_FALLBACK ? 'local' : 'github',
+    owner: process.env.GITHUB_OWNER || null,
+    repo: process.env.GITHUB_REPO || null,
+    branch: BRANCH,
+    dataDir: DATA_DIR
   });
 });
 
@@ -264,7 +275,8 @@ app.post('/api/rooms', async (req, res) => {
     res.status(500).json({
       error: 'No se pudo crear la sala.',
       details: error.message,
-      stack: process.env.VERCEL ? undefined : error.stack
+      status: error.status,
+      githubResponse: error.response?.data || null
     });
   }
 });
