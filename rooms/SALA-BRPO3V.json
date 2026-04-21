@@ -1,0 +1,16 @@
+{
+  "roomCode": "SALA-BRPO3V",
+  "theme": "profundo",
+  "status": "waiting",
+  "phase": "waiting_player_2",
+  "players": [
+    {
+      "id": "a9468a7e-fd4b-4fe6-9bdf-870ce7ea92ee",
+      "name": "Marcos",
+      "score": 0
+    }
+  ],
+  "currentTurn": {},
+  "round": 1,
+  "maxRounds": 5
+}
