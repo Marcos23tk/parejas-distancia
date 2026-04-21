@@ -1,13 +1,13 @@
 {
   "roomCode": "SALA-YLI384",
   "createdAt": "2026-04-21T02:06:55.928Z",
-  "updatedAt": "2026-04-21T02:07:27.235Z",
+  "updatedAt": "2026-04-21T02:08:11.134Z",
   "status": "playing",
   "theme": "romantico",
   "round": 1,
   "maxRounds": 5,
-  "activePlayerId": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
-  "phase": "answering",
+  "activePlayerId": "7b252c48-aa04-462c-8837-5d7bb4333563",
+  "phase": "guessing",
   "players": [
     {
       "id": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
@@ -24,7 +24,7 @@
     "askerId": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
     "guesserId": "7b252c48-aa04-462c-8837-5d7bb4333563",
     "question": "¿Que plan te gustaria vivir conmigo en persona?",
-    "correctAnswer": "",
+    "correctAnswer": "si",
     "guess": "",
     "result": null,
     "challengeFor": null,
