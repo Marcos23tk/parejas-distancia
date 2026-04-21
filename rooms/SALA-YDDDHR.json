@@ -1,17 +1,12 @@
 {
   "roomCode": "SALA-YDDDHR",
   "theme": "romantico",
-  "status": "playing",
+  "status": "waiting",
   "phase": "waiting_player_2",
   "players": [
     {
       "id": "aba8d1a2-63bf-4440-90a4-4bbe9343ad72",
       "name": "Marcos",
-      "score": 0
-    },
-    {
-      "id": "a2b371ba-ebff-4052-b6b2-9a6554848db0",
-      "name": "naydelin",
       "score": 0
     }
   ],
