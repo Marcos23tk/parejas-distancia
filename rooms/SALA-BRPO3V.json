@@ -1,12 +1,17 @@
 {
   "roomCode": "SALA-BRPO3V",
   "theme": "profundo",
-  "status": "waiting",
+  "status": "playing",
   "phase": "waiting_player_2",
   "players": [
     {
       "id": "a9468a7e-fd4b-4fe6-9bdf-870ce7ea92ee",
       "name": "Marcos",
+      "score": 0
+    },
+    {
+      "id": "7f41b2b5-c630-42a6-bc32-c2c179fbb394",
+      "name": "Naydelin",
       "score": 0
     }
   ],
