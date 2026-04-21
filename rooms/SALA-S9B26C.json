@@ -1,13 +1,13 @@
 {
   "roomCode": "SALA-S9B26C",
   "createdAt": "2026-04-21T02:55:05.980Z",
-  "updatedAt": "2026-04-21T03:16:55.022Z",
+  "updatedAt": "2026-04-21T03:20:36.624Z",
   "status": "playing",
   "theme": "romantico",
   "round": 4,
   "maxRounds": 5,
-  "activePlayerId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
-  "phase": "answering",
+  "activePlayerId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
+  "phase": "guessing",
   "players": [
     {
       "id": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
@@ -24,7 +24,7 @@
     "askerId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
     "guesserId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
     "question": "¿Que cancion te recuerda a mi?",
-    "correctAnswer": "",
+    "correctAnswer": "Nubesita \nSolo tu",
     "guess": "",
     "result": null,
     "challengeFor": null,
