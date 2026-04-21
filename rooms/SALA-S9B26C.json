@@ -1,13 +1,13 @@
 {
   "roomCode": "SALA-S9B26C",
   "createdAt": "2026-04-21T02:55:05.980Z",
-  "updatedAt": "2026-04-21T03:28:22.011Z",
-  "status": "playing",
+  "updatedAt": "2026-04-21T03:28:53.326Z",
+  "status": "finished",
   "theme": "romantico",
-  "round": 5,
+  "round": 6,
   "maxRounds": 5,
   "activePlayerId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
-  "phase": "round_result",
+  "phase": "finished",
   "players": [
     {
       "id": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
