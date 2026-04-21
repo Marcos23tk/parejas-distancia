@@ -134,7 +134,9 @@ async function refreshRoom() {
 }
 
 function renderGame() {
-  document.getElementById('leaveBtn').classList.remove('hidden');
+   if (!state.room) return;
+
+  document.getElementById('leaveBtn')?.classList.remove('hidden');
   $('setupCard').classList.add('hidden');
   $('gameCard').classList.remove('hidden');
   $('roomTitle').textContent = `Sala ${state.room.roomCode}`;
@@ -147,15 +149,14 @@ function renderGame() {
 }
 
 function renderPlayers() {
+  if (!state.room || !state.room.players) return;
+
   $('playersBoard').innerHTML = state.room.players.map((player) => `
-    <div class="player ${state.room.activePlayerId === player.id ? 'active' : ''}">
-      <div><strong>${escapeHtml(player.name)}</strong></div>
-      <div class="score">${player.score} pts</div>
-      <div>${player.id === state.playerId ? 'Eres tu' : 'Tu pareja'}</div>
+    <div>
+      ${player.name} - ${player.score}
     </div>
   `).join('');
 }
-
 function renderCurrentState() {
   const me = state.room.players.find((p) => p.id === state.playerId);
   const asker = state.room.players.find((p) => p.id === state.room.currentTurn.askerId);
@@ -256,31 +257,20 @@ function renderTurnCard() {
 }
 
 function renderHistory() {
-  if (!state.room.history.length) {
+  if (!state.room?.history?.length) {
     $('historyList').innerHTML = '<p>Aun no hay rondas completadas.</p>';
     return;
   }
 
   $('historyList').innerHTML = [...state.room.history].reverse().map((item) => {
-    const challenged = item.challengeFor === 'empate'
-      ? 'Ambos'
-      : state.room.players.find((p) => p.id === item.challengeFor)?.name || 'Jugador';
-
     return `
       <div class="history-item">
         <strong>Ronda ${item.round}</strong>
-        <p><strong>Pregunta:</strong> ${escapeHtml(item.question)}</p>
-        <p><strong>Respuesta:</strong> ${escapeHtml(item.correctAnswer)}</p>
-        <p><strong>Adivinanza:</strong> ${escapeHtml(item.guess)}</p>
-        <p><strong>Resultado:</strong> ${escapeHtml(item.result)}</p>
-        <p><strong>Reto/Pregunta para:</strong> ${escapeHtml(challenged)}</p>
-        <p><strong>Contenido:</strong> ${escapeHtml(item.challengeText)}</p>
-        <p><strong>Puntajes:</strong> ${item.scores.map((s) => `${escapeHtml(s.name)} ${s.score}`).join(' · ')}</p>
+        <p>${item.question}</p>
       </div>
     `;
   }).join('');
 }
-
 async function sendAnswer() {
   const answer = $('answerInput')?.value.trim();
   if (!answer) return alert('Escribe una respuesta.');
