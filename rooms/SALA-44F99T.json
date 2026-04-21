@@ -1,0 +1,29 @@
+{
+  "roomCode": "SALA-44F99T",
+  "createdAt": "2026-04-21T02:55:01.159Z",
+  "updatedAt": "2026-04-21T02:55:01.159Z",
+  "status": "waiting",
+  "theme": "romantico",
+  "round": 1,
+  "maxRounds": 5,
+  "activePlayerId": "4f2570e6-a650-42fe-bfcb-8fa5318586aa",
+  "phase": "waiting_player_2",
+  "players": [
+    {
+      "id": "4f2570e6-a650-42fe-bfcb-8fa5318586aa",
+      "name": "Naydelin",
+      "score": 0
+    }
+  ],
+  "currentTurn": {
+    "askerId": "4f2570e6-a650-42fe-bfcb-8fa5318586aa",
+    "guesserId": null,
+    "question": "",
+    "correctAnswer": "",
+    "guess": "",
+    "result": null,
+    "challengeFor": null,
+    "challengeText": ""
+  },
+  "history": []
+}
