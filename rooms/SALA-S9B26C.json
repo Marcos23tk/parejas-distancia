@@ -1,13 +1,13 @@
 {
   "roomCode": "SALA-S9B26C",
   "createdAt": "2026-04-21T02:55:05.980Z",
-  "updatedAt": "2026-04-21T03:11:30.979Z",
+  "updatedAt": "2026-04-21T03:16:55.022Z",
   "status": "playing",
   "theme": "romantico",
-  "round": 3,
+  "round": 4,
   "maxRounds": 5,
   "activePlayerId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
-  "phase": "round_result",
+  "phase": "answering",
   "players": [
     {
       "id": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
@@ -21,14 +21,14 @@
     }
   ],
   "currentTurn": {
-    "askerId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
-    "guesserId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
-    "question": "¿Cual es un recuerdo nuestro que te da paz?",
-    "correctAnswer": "tus ojos",
-    "guess": "Tus ojos",
-    "result": "correcto",
-    "challengeFor": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
-    "challengeText": "Reto: escribe un mensaje romantico de minimo 5 lineas."
+    "askerId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
+    "guesserId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
+    "question": "¿Que cancion te recuerda a mi?",
+    "correctAnswer": "",
+    "guess": "",
+    "result": null,
+    "challengeFor": null,
+    "challengeText": ""
   },
   "history": [
     {
