@@ -1,12 +1,17 @@
 {
   "roomCode": "SALA-T6HEQV",
   "theme": "romantico",
-  "status": "waiting",
+  "status": "playing",
   "phase": "waiting_player_2",
   "players": [
     {
       "id": "97dd6261-9864-47c3-8a7a-97dee3a871b1",
       "name": "Naydelin",
+      "score": 0
+    },
+    {
+      "id": "3a9a8ac5-78b0-4f4b-a914-2769eff9ca62",
+      "name": "Marcos",
       "score": 0
     }
   ],
