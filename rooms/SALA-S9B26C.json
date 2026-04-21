@@ -1,18 +1,18 @@
 {
   "roomCode": "SALA-S9B26C",
   "createdAt": "2026-04-21T02:55:05.980Z",
-  "updatedAt": "2026-04-21T02:58:38.227Z",
+  "updatedAt": "2026-04-21T02:59:33.842Z",
   "status": "playing",
   "theme": "romantico",
   "round": 1,
   "maxRounds": 5,
   "activePlayerId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
-  "phase": "guessing",
+  "phase": "round_result",
   "players": [
     {
       "id": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
       "name": "Marcos",
-      "score": 0
+      "score": 1
     },
     {
       "id": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
@@ -25,10 +25,32 @@
     "guesserId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
     "question": "¿Cual es un recuerdo nuestro que te da paz?",
     "correctAnswer": "Enamorados",
-    "guess": "",
-    "result": null,
-    "challengeFor": null,
-    "challengeText": ""
+    "guess": "Equipo",
+    "result": "incorrecto",
+    "challengeFor": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
+    "challengeText": "Reto: manda una foto de algo que te recuerde a su relacion."
   },
-  "history": []
+  "history": [
+    {
+      "round": 1,
+      "askerId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
+      "guesserId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
+      "question": "¿Cual es un recuerdo nuestro que te da paz?",
+      "correctAnswer": "Enamorados",
+      "guess": "Equipo",
+      "result": "incorrecto",
+      "challengeFor": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
+      "challengeText": "Reto: manda una foto de algo que te recuerde a su relacion.",
+      "scores": [
+        {
+          "name": "Marcos",
+          "score": 1
+        },
+        {
+          "name": "Naydelin",
+          "score": 0
+        }
+      ]
+    }
+  ]
 }
