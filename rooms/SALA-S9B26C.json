@@ -1,13 +1,13 @@
 {
   "roomCode": "SALA-S9B26C",
   "createdAt": "2026-04-21T02:55:05.980Z",
-  "updatedAt": "2026-04-21T03:21:04.537Z",
+  "updatedAt": "2026-04-21T03:25:11.285Z",
   "status": "playing",
   "theme": "romantico",
-  "round": 4,
+  "round": 5,
   "maxRounds": 5,
   "activePlayerId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
-  "phase": "round_result",
+  "phase": "answering",
   "players": [
     {
       "id": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
@@ -21,14 +21,14 @@
     }
   ],
   "currentTurn": {
-    "askerId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
-    "guesserId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
-    "question": "¿Que cancion te recuerda a mi?",
-    "correctAnswer": "Nubesita \nSolo tu",
-    "guess": "solo tu nubecitas",
-    "result": "incorrecto",
-    "challengeFor": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
-    "challengeText": "Reto: dedica una cancion y explica por que la elegiste."
+    "askerId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
+    "guesserId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
+    "question": "¿Que detalle mio te hace sentir mas querido(a)?",
+    "correctAnswer": "",
+    "guess": "",
+    "result": null,
+    "challengeFor": null,
+    "challengeText": ""
   },
   "history": [
     {
