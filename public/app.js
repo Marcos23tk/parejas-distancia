@@ -30,6 +30,7 @@ async function api(path, options = {}) {
 }
 
 async function init() {
+  document.getElementById('leaveBtn').classList.add('hidden');
   try {
     const health = await api('/api/health');
     $('storageMode').textContent = `Almacenamiento: ${health.mode === 'github' ? 'GitHub' : 'Local'}`;
@@ -114,6 +115,7 @@ function clearSession() {
   state.room = null;
   state.playerId = '';
   state.roomCode = '';
+  document.getElementById('leaveBtn').classList.add('hidden');
 }
 
 function setStatus(message) {
@@ -132,6 +134,7 @@ async function refreshRoom() {
 }
 
 function renderGame() {
+  document.getElementById('leaveBtn').classList.remove('hidden');
   $('setupCard').classList.add('hidden');
   $('gameCard').classList.remove('hidden');
   $('roomTitle').textContent = `Sala ${state.room.roomCode}`;
