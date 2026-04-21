@@ -1,0 +1,29 @@
+{
+  "roomCode": "SALA-YLI384",
+  "createdAt": "2026-04-21T02:06:55.928Z",
+  "updatedAt": "2026-04-21T02:06:55.929Z",
+  "status": "waiting",
+  "theme": "romantico",
+  "round": 1,
+  "maxRounds": 5,
+  "activePlayerId": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
+  "phase": "waiting_player_2",
+  "players": [
+    {
+      "id": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
+      "name": "marcos",
+      "score": 0
+    }
+  ],
+  "currentTurn": {
+    "askerId": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
+    "guesserId": null,
+    "question": "",
+    "correctAnswer": "",
+    "guess": "",
+    "result": null,
+    "challengeFor": null,
+    "challengeText": ""
+  },
+  "history": []
+}
