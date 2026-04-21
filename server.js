@@ -444,5 +444,47 @@ if (!IS_VERCEL) {
     }
   });
 }
+app.post('/api/rooms/:roomCode/leave', async (req, res, next) => {
+  try {
+    const room = await readRoom(req.params.roomCode);
+    const { playerId } = req.body;
 
+    const index = room.players.findIndex(p => p.id === playerId);
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Jugador no encontrado en la sala.' });
+    }
+
+    // eliminar jugador
+    room.players.splice(index, 1);
+
+    // si no queda nadie → eliminar sala (opcional)
+    if (room.players.length === 0) {
+      return res.json({ message: 'Sala eliminada.' });
+    }
+
+    // si queda uno → volver a estado inicial
+    if (room.players.length === 1) {
+      room.status = 'waiting';
+      room.phase = 'waiting_player_2';
+      room.activePlayerId = room.players[0].id;
+      room.currentTurn = {
+        askerId: room.players[0].id,
+        guesserId: null,
+        question: '',
+        correctAnswer: '',
+        guess: '',
+        result: null,
+        challengeFor: null,
+        challengeText: ''
+      };
+    }
+
+    await writeRoom(room);
+    res.json(room);
+
+  } catch (error) {
+    next(error);
+  }
+});
 export default app;
