@@ -1,13 +1,13 @@
 {
   "roomCode": "SALA-S9B26C",
   "createdAt": "2026-04-21T02:55:05.980Z",
-  "updatedAt": "2026-04-21T03:03:36.462Z",
+  "updatedAt": "2026-04-21T03:04:20.587Z",
   "status": "playing",
   "theme": "romantico",
   "round": 2,
   "maxRounds": 5,
   "activePlayerId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
-  "phase": "guessing",
+  "phase": "round_result",
   "players": [
     {
       "id": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
@@ -17,7 +17,7 @@
     {
       "id": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
       "name": "Naydelin",
-      "score": 0
+      "score": 1
     }
   ],
   "currentTurn": {
@@ -25,10 +25,10 @@
     "guesserId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
     "question": "¿Que plan te gustaria vivir conmigo en persona?",
     "correctAnswer": "Viajar",
-    "guess": "",
-    "result": null,
-    "challengeFor": null,
-    "challengeText": ""
+    "guess": "viajes",
+    "result": "incorrecto",
+    "challengeFor": "empate",
+    "challengeText": "Empate: ambos deben responder una pregunta especial juntos: ¿que les mantiene unidos a pesar de la distancia?"
   },
   "history": [
     {
@@ -49,6 +49,27 @@
         {
           "name": "Naydelin",
           "score": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "askerId": "7b310e52-b105-4675-a1f0-7cfc5b453f6e",
+      "guesserId": "b00719ed-f80d-472b-a1ef-38fbaf3cb0c6",
+      "question": "¿Que plan te gustaria vivir conmigo en persona?",
+      "correctAnswer": "Viajar",
+      "guess": "viajes",
+      "result": "incorrecto",
+      "challengeFor": "empate",
+      "challengeText": "Empate: ambos deben responder una pregunta especial juntos: ¿que les mantiene unidos a pesar de la distancia?",
+      "scores": [
+        {
+          "name": "Marcos",
+          "score": 1
+        },
+        {
+          "name": "Naydelin",
+          "score": 1
         }
       ]
     }
