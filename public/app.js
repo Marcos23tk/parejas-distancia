@@ -341,7 +341,22 @@ function escapeHtml(text) {
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#039;');
 }
+async function leaveRoom() {
+  if (!confirm('¿Seguro que quieres abandonar la sala?')) return;
 
+  try {
+    await api(`/api/rooms/${state.roomCode}/leave`, {
+      method: 'POST',
+      body: JSON.stringify({ playerId: state.playerId })
+    });
+
+    clearSession();
+    location.reload();
+
+  } catch (error) {
+    alert(error.message);
+  }
+}
 window.sendAnswer = sendAnswer;
 window.sendGuess = sendGuess;
 
