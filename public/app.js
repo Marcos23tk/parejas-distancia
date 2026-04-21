@@ -11,14 +11,21 @@ async function api(path, options = {}) {
     headers: { 'Content-Type': 'application/json' },
     ...options
   });
+
   const text = await response.text();
   let data;
+
   try {
     data = text ? JSON.parse(text) : {};
-  } catch (error) {
-    throw new Error(`Error del servidor: ${response.status} ${text}`);
+  } catch {
+    throw new Error(`Error del servidor: ${response.status} ${text || 'Respuesta invalida.'}`);
   }
-  if (!response.ok) throw new Error(data.error || text || `HTTP ${response.status}`);
+
+  if (!response.ok) {
+    const message = [data.error, data.details].filter(Boolean).join(' - ');
+    throw new Error(message || `HTTP ${response.status}`);
+  }
+
   return data;
 }
 
@@ -26,6 +33,10 @@ async function init() {
   try {
     const health = await api('/api/health');
     $('storageMode').textContent = `Almacenamiento: ${health.mode === 'github' ? 'GitHub' : 'Local'}`;
+
+    if (health.isVercel && !health.githubConfigured) {
+      setStatus(`Faltan variables en Vercel: ${health.missingGithubVars.join(', ')}`);
+    }
   } catch {
     $('storageMode').textContent = 'Servidor no disponible';
   }
@@ -36,8 +47,7 @@ async function init() {
       state.room = room;
       renderGame();
     } catch {
-      localStorage.removeItem('roomCode');
-      localStorage.removeItem('playerId');
+      clearSession();
     }
   }
 }
@@ -45,6 +55,7 @@ async function init() {
 $('createBtn').addEventListener('click', async () => {
   const playerName = $('createName').value.trim();
   const theme = $('theme').value;
+
   if (!playerName) return setStatus('Escribe tu nombre para crear la sala.');
 
   try {
@@ -52,6 +63,7 @@ $('createBtn').addEventListener('click', async () => {
       method: 'POST',
       body: JSON.stringify({ playerName, theme })
     });
+
     const me = room.players[0];
     state.room = room;
     state.playerId = me.id;
@@ -67,6 +79,7 @@ $('createBtn').addEventListener('click', async () => {
 $('joinBtn').addEventListener('click', async () => {
   const playerName = $('joinName').value.trim();
   const roomCode = $('joinCode').value.trim().toUpperCase();
+
   if (!playerName || !roomCode) return setStatus('Completa nombre y codigo de sala.');
 
   try {
@@ -74,6 +87,7 @@ $('joinBtn').addEventListener('click', async () => {
       method: 'POST',
       body: JSON.stringify({ playerName })
     });
+
     const me = room.players.find((p) => p.name === playerName) || room.players[1];
     state.room = room;
     state.playerId = me.id;
@@ -94,12 +108,21 @@ function saveSession() {
   localStorage.setItem('roomCode', state.roomCode);
 }
 
+function clearSession() {
+  localStorage.removeItem('playerId');
+  localStorage.removeItem('roomCode');
+  state.room = null;
+  state.playerId = '';
+  state.roomCode = '';
+}
+
 function setStatus(message) {
   $('setupStatus').textContent = message;
 }
 
 async function refreshRoom() {
   if (!state.roomCode) return;
+
   try {
     state.room = await api(`/api/rooms/${state.roomCode}`);
     renderGame();
@@ -321,4 +344,5 @@ function escapeHtml(text) {
 
 window.sendAnswer = sendAnswer;
 window.sendGuess = sendGuess;
+
 init();
