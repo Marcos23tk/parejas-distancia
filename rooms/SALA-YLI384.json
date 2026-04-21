@@ -1,13 +1,13 @@
 {
   "roomCode": "SALA-YLI384",
   "createdAt": "2026-04-21T02:06:55.928Z",
-  "updatedAt": "2026-04-21T02:08:11.134Z",
+  "updatedAt": "2026-04-21T02:08:19.685Z",
   "status": "playing",
   "theme": "romantico",
   "round": 1,
   "maxRounds": 5,
   "activePlayerId": "7b252c48-aa04-462c-8837-5d7bb4333563",
-  "phase": "guessing",
+  "phase": "round_result",
   "players": [
     {
       "id": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
@@ -17,7 +17,7 @@
     {
       "id": "7b252c48-aa04-462c-8837-5d7bb4333563",
       "name": "Naydelin",
-      "score": 0
+      "score": 2
     }
   ],
   "currentTurn": {
@@ -25,10 +25,32 @@
     "guesserId": "7b252c48-aa04-462c-8837-5d7bb4333563",
     "question": "¿Que plan te gustaria vivir conmigo en persona?",
     "correctAnswer": "si",
-    "guess": "",
-    "result": null,
-    "challengeFor": null,
-    "challengeText": ""
+    "guess": "si",
+    "result": "correcto",
+    "challengeFor": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
+    "challengeText": "Pregunta especial: ¿que es lo que mas agradeces de tu pareja hoy?"
   },
-  "history": []
+  "history": [
+    {
+      "round": 1,
+      "askerId": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
+      "guesserId": "7b252c48-aa04-462c-8837-5d7bb4333563",
+      "question": "¿Que plan te gustaria vivir conmigo en persona?",
+      "correctAnswer": "si",
+      "guess": "si",
+      "result": "correcto",
+      "challengeFor": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
+      "challengeText": "Pregunta especial: ¿que es lo que mas agradeces de tu pareja hoy?",
+      "scores": [
+        {
+          "name": "marcos",
+          "score": 0
+        },
+        {
+          "name": "Naydelin",
+          "score": 2
+        }
+      ]
+    }
+  ]
 }
