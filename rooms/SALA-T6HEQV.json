@@ -1,0 +1,16 @@
+{
+  "roomCode": "SALA-T6HEQV",
+  "theme": "romantico",
+  "status": "waiting",
+  "phase": "waiting_player_2",
+  "players": [
+    {
+      "id": "97dd6261-9864-47c3-8a7a-97dee3a871b1",
+      "name": "Naydelin",
+      "score": 0
+    }
+  ],
+  "currentTurn": {},
+  "round": 1,
+  "maxRounds": 5
+}
