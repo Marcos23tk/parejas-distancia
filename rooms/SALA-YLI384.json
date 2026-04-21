@@ -2,34 +2,20 @@
   "roomCode": "SALA-YLI384",
   "createdAt": "2026-04-21T02:06:55.928Z",
   "updatedAt": "2026-04-21T02:08:45.685Z",
-  "status": "playing",
+  "status": "waiting",
   "theme": "romantico",
-  "round": 2,
+  "round": 1,
   "maxRounds": 5,
   "activePlayerId": "7b252c48-aa04-462c-8837-5d7bb4333563",
-  "phase": "answering",
+  "phase": "waiting_player_2",
   "players": [
-    {
-      "id": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
-      "name": "marcos",
-      "score": 0
-    },
     {
       "id": "7b252c48-aa04-462c-8837-5d7bb4333563",
       "name": "Naydelin",
       "score": 2
     }
   ],
-  "currentTurn": {
-    "askerId": "7b252c48-aa04-462c-8837-5d7bb4333563",
-    "guesserId": "b11032a0-fcbd-4635-a179-32c7c7d0c6f0",
-    "question": "¿Cual fue tu primera impresion de mi?",
-    "correctAnswer": "",
-    "guess": "",
-    "result": null,
-    "challengeFor": null,
-    "challengeText": ""
-  },
+  "currentTurn": {},
   "history": [
     {
       "round": 1,
