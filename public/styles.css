@@ -138,6 +138,12 @@ button.secondary {
     flex-direction: column;
   }
 }
-<button onclick="leaveRoom()" style="background:#e74c3c;color:white;">
-  Abandonar sala
-</button>
+button.leave {
+  background: #e74c3c;
+  color: white;
+  border: none;
+}
+
+button.leave:hover {
+  background: #c0392b;
+}
